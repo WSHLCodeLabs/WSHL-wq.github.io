@@ -1,0 +1,19 @@
+body {
+    background-color: #101010;
+  }
+
+
+  h1 {
+    text-align:left;
+    font-family:Helvetica, sans-serif;
+    color:#ffffff;
+    font-weight: bold;
+  }
+
+  h2 {
+
+    font-family: 'Noto Sans Thai', serif;
+    color:#ffffff;color:#ffffff;
+    text-align:left;
+    font-weight: light;
+  }
