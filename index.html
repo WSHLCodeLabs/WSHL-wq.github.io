@@ -1,20 +1,104 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-         <title>TCAS Score</title>
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" 
-         crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans+Thai:wght@300&display=swap" rel="stylesheet">
-         <link rel="stylesheet" href="assets/style.css">
-         
-         <h1><center>TCAS Score calculator</center></h1>
-    </head>
+<html lang="en">
 
-    <body>
-      <h2><center>ตัวช่วยคิดสัดส่วนคะแนนในการสมัครเข้ามหาวิทยาลัย ใส่เปอร์เซ็นต์ที่มหาวิทยาลัยต้องการ และใส่คะแนน TGAT, TPAT เพื่อทำการคำนวนได้เลย ตามสูตรข้างล่างนี้ </center></h2>
-      <center><img src="assets/img/score_example.jpg" alt="example" class="responsive"> 
-      <hr class="solid">
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>TCAS Calc</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Thai&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: #101010;">
+    <div class="container">
+        <h1 center="" style="text-align: center;color: rgb(255,255,255);">&nbsp; &nbsp; &nbsp;</h1>
+    </div>
+    <h1 style="color: rgb(255,255,255);text-align: center;font-family: Montserrat, sans-serif;font-weight: bold;font-size: 38px;">TCAS Score Calculator</h1>
+    <div class="container">
+        <p class="text-center" style="color: rgb(255,255,255);text-align: center;font-family: 'Noto Sans Thai', sans-serif;">ตัวช่วยในการคิดสัดส่วนคะแนนสอบ TCAS ใส่เปอร์เซ็นต์ที่มหาวิทยาลัยต้องการ และใส่คะแนน TGAT, TPAT เพื่อทำการคำนวนได้เลย ตามสูตรข้างล่างนี้<br><br><br></p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col"><img class="responsive" src="assets/img/score_example_l.jpg"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>&nbsp; &nbsp; &nbsp;</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 style="color: rgb(255,255,255);font-family: 'Noto Sans Thai', sans-serif;font-weight: bold;text-align: center;">เครื่องคิดเลข</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="text-center d-lg-flex mb-0" style="font-family: 'Noto Sans Thai', sans-serif;">คำนวนสัดส่วนคะแนน TCAS</h5>
+                    </div>
+                    <div class="card-body placeholder" style="background: rgb(255,255,255);color: rgb(54,56,58);"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="gpaxscore" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;color: rgb(0,0,0);border-color: rgb(255,0,0);" inputmode="numeric" name="gpax" placeholder="ใส่ GPAX 5 หรือ 6"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="gpaxpercentage" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;color: rgb(0,0,0);border-color: rgb(255,0,0);" inputmode="numeric" name="gpaxpercentage" placeholder="เปอร์เซ็นต์ GPAX"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="tgatscore" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;color: rgb(0,0,0);border-color: #6100ff;" inputmode="numeric" name="tgatscore" placeholder="ใส่คะแนน TGAT"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="tgatpercentage" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;border-color: #6100ff;" inputmode="numeric" name="tgatpercentage" placeholder="เปอร์เซ็นต์ TGAT"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="tpatscore" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;border-color: rgb(82,255,0);" inputmode="numeric" name="tgatpercentage" placeholder="ใส่คะแนน TPAT"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="tpatpercentage" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;border-color: rgb(82,255,0);" inputmode="numeric" name="tgatpercentage" placeholder="เปอร์เซ็นต์ TPAT"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center"><button class="btn btn-primary" id="calculate-button" type="button" style="border-radius: 6px;width: 112.9375px;height: 54px;font-family: 'Noto Sans Thai', sans-serif;font-weight: bold;font-size: 18px;">คำนวน</button></div>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">สัดส่วนคะแนนของคุณคือ</h4>
+                <h6 class="text-muted card-subtitle mb-2">GPAX</h6><span id="gpaxresult" style="font-size: 57px;">0</span>
+                <h6 class="text-muted card-subtitle mb-2">TGAT</h6><span id="gatresult" style="font-size: 57px;">0</span>
+                <h6 class="text-muted card-subtitle mb-2">TPAT</h6><span id="patresult" style="font-size: 57px;">0</span>
+                <h6 class="text-muted card-subtitle mb-2" style="font-size: 32px;font-family: 'Noto Sans Thai', sans-serif;color: rgb(255,255,255);">รวม</h6><span id="sumall" style="font-size: 57px;">0</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>&nbsp; &nbsp;</h1>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0" style="font-family: 'Noto Sans Thai', sans-serif;">คำนวน T-Score</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Coming soon! 😊</p>
+            </div>
+        </div>
+    </div>
+    <div class="container"></div>
+    <div class="container">
+        <footer class="text-center py-4">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-lg-3">
+                    <div class="col">
+                        <p class="text-muted my-2">Made with ❤️ by Wuttipat.</p>
+                    </div>
+                    <div class="col">
+                        <ul class="list-inline my-2">
+                            <li class="list-inline-item me-4"></li>
+                            <li class="list-inline-item me-4"></li>
+                            <li class="list-inline-item"></li>
+                        </ul><a href="https://www.facebook.com/wuttipatsnj">My facebook</a>>
+                    </div>
+                    <div class="col">
+                        <ul class="list-inline my-2">
+                            <li class="list-inline-item"></li>
+                            <li class="list-inline-item"><a class="link-secondary" href="#">Build with Bootstrap 5</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
 
 </html>
