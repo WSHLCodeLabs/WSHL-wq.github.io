@@ -4,15 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>TCAS Calc</title>
+    <title>TCAS Score calculator </title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Thai&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body style="background: #101010;">
+<body style="background: #212529;">
     <div class="container">
         <h1 center="" style="text-align: center;color: rgb(255,255,255);">&nbsp; &nbsp; &nbsp;</h1>
     </div>
@@ -33,69 +33,131 @@
         </div>
     </div>
     <div class="container">
-        <h1 style="color: rgb(255,255,255);font-family: 'Noto Sans Thai', sans-serif;font-weight: bold;text-align: center;">เครื่องคิดเลข</h1>
+        <section class="py-4 py-xl-5">
+            <div class="container">
+                <div class="text-white bg-dark border rounded border-0 p-4 p-md-5">
+                    <h2 class="fw-bold text-white mb-3" style="font-family: 'Noto Sans Thai', sans-serif;">สัดส่วนคะแนนดูได้จากที่ไหน?</h2>
+                    <p class="mb-4" style="font-family: 'Noto Sans Thai', sans-serif;">สามารถดูได้จากเว็บ MyTCAS.com เมนูหลักสูตร หรือค้นหาจากชื่อมหาวิทยาลัย</p>
+                    <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="https://www.mytcas.com/search" style="font-family: 'Noto Sans Thai', sans-serif;box-shadow: inset 0px 0px 4px rgb(0,0,0);font-weight: bold;">ค้นหาจากชื่อคณะ</a><a class="btn btn-light btn-lg" role="button" href="https://www.mytcas.com/universities" style="font-family: 'Noto Sans Thai', sans-serif;box-shadow: inset 0px 0px 4px;background: rgb(255,255,255);font-weight: bold;">ค้นหาจากชื่อมหาวิทยาลัย</a></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container py-4 py-xl-5" style="box-shadow: 0px 0px rgb(255,255,255);">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <div class="card">
+                    <div class="card-body" style="border-radius: 0px;box-shadow: 0px 0px 18px rgb(255,255,255);">
+                        <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">คะแนนรวมของคุณเท่ากับ</h4><span id="sumall" style="font-size: 61px;font-family: Montserrat, sans-serif;">0</span>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-flag">
+                                <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z"></path>
+                            </svg></div>
+                        <h4 class="card-title">GPAX</h4><input type="text" id="gpaxscore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="GPAX 5 หรือ 6 เทอม" name="gpaxscore">
+                        <p class="card-text">&nbsp; &nbsp; &nbsp;&nbsp;</p><input type="text" id="gpaxpercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์ GPAX " name="gpaxpercentage">
+                        <p class="card-text">&nbsp; &nbsp; &nbsp;&nbsp;</p>
+                        <p class="card-text">&nbsp; &nbsp; &nbsp;&nbsp;</p>
+                        <p class="card-text" style="font-family: 'Noto Sans Thai', sans-serif;">คำแนะนำ : เปอร์เซ็นต์ คือสัดส่วนคะแนนที่มหาวิทยาลัยกำหนดมาเป็นเกณฑ์การคำนวน เช่น ใช้ GPAX 20% ในการคำนวน ดูรายละเอียดได้ใน mytcas.com ในหัวข้อรายละเอียดของแต่ละสาขา</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-flag">
+                                <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z"></path>
+                            </svg></div>
+                        <h4 class="card-title">TGAT</h4><input type="text" id="tgatscore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="คะแนน TGAT" name="tgatscore">
+                        <p class="card-text">&nbsp; &nbsp; &nbsp;&nbsp;</p><input type="text" id="tgatpercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์ TGAT " name="tgatpercentage">
+                        <p class="card-text">&nbsp; &nbsp; &nbsp;&nbsp;</p>
+                        <h4 class="card-title">TPAT</h4><input type="text" id="tpatscore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="คะแนน TPAT" name="tpatscore">
+                        <p class="card-text" style="font-family: 'Noto Sans Thai', sans-serif;">&nbsp; &nbsp; &nbsp;&nbsp;</p><input type="text" id="tpatpercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์ TGAT " name="tpatpercentage">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body p-4">
+                        <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center d-inline-block mb-3 bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-flag">
+                                <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21.294 21.294 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21.317 21.317 0 0 0 14 7.655V1.222z"></path>
+                            </svg></div>
+                        <p class="card-text" style="font-family: 'Noto Sans Thai', sans-serif;">คะแนน A-Level (ใส่เฉพาะคะแนนที่ใช้)</p>
+                        <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">A-Level คณิตศาสตร์ 1,2</h4><input type="text" id="mathscore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="คะแนน A-Level" name="mathscore"><input type="text" id="mathpercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์" name="mathpercentage">
+                        <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">A-Level วิทยาศาสตร์ประยุกต์</h4><input type="text" id="sciscore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="คะแนน A-Level" name="sciscore"><input type="text" id="scipercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์" name="scipercentage">
+                        <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">A-Level ฟิสิกส์</h4><input type="text" id="physcore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="คะแนน A-Level" name="physcore"><input type="text" id="phypercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์" name="phypercentage">
+                        <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">A-Level เคมี</h4><input type="text" id="chemscore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="คะแนน A-Level" name="chemscore"><input type="text" id="chempercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์" name="chempercentage">
+                        <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">A-Level ชีววิทยา</h4><input type="text" id="bioscore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="คะแนน A-Level" name="bioscore"><input type="text" id="biopercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์" name="biopercentage">
+                        <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">A-Level สังคมศึกษา</h4><input type="text" id="socscore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="คะแนน A-Level" name="socscore"><input type="text" id="socpercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์" name="socpercentage">
+                        <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">A-Level ภาษาไทย</h4><input type="text" id="thascore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="คะแนน A-Level" name="thascore"><input type="text" id="thapercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์ " name="thapercentage">
+                        <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">A-Level ภาษาอังกฤษ</h4><input type="text" id="engscore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="คะแนน A-Level" name="engscore"><input type="text" id="engpercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์" name="engpercentage">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card-group"></div>
+    </div>
+    <div class="container text-center"></div>
+    <div class="container text-center"><button class="btn btn-primary" id="calculate-button" type="button" style="width: 186.5px;height: 44px;font-family: 'Noto Sans Thai', sans-serif;font-size: 24px;box-shadow: 0px 0px 4px rgb(0,0,0);">คำนวณเลย!</button></div>
+    <div class="container text-center">
+        <h1>Heading</h1>
+    </div>
+    <div class="container text-center"></div>
+    <div class="container text-center"></div>
+    <div class="container text-center"></div>
+    <div class="container text-center">
+        <h1>Heading</h1>
+    </div>
+    <div class="container text-center">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">คำนวน T Score</h4>
+                <p class="card-text" style="font-family: 'Noto Sans Thai', sans-serif;"><br>จะอัพเดทเข้ามาเร็วๆนี้ครับ 😊<br><br></p>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <h1>Heading</h1>
+    </div>
+    <div class="container text-center"></div>
+    <div class="container">
+        <div class="card"></div>
+    </div>
+    <div class="container">
+        <div class="card"></div>
+    </div>
+    <div class="container">
+        <div class="card textdark text-dark">
+            <div class="card-body text-dark" style="background: #212529;">
+                <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;color: rgb(255,255,255);">พบปัญหา หรือมีข้อเสนอแนะ?</h4>
+                <h6 class="text-muted card-subtitle mb-2" style="color: var(--bs-white);font-family: 'Noto Sans Thai', sans-serif;">ติดต่อได้ที่<br>Facebook : Wuttipat Sa-ngachan</h6>
+            </div>
+        </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="text-center d-lg-flex mb-0" style="font-family: 'Noto Sans Thai', sans-serif;">คำนวนสัดส่วนคะแนน TCAS</h5>
-                    </div>
-                    <div class="card-body placeholder" style="background: rgb(255,255,255);color: rgb(54,56,58);"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="gpaxscore" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;color: rgb(0,0,0);border-color: rgb(255,0,0);" name="gpax" placeholder="ใส่ GPAX 5 หรือ 6"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="gpaxpercentage" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;color: rgb(0,0,0);border-color: rgb(255,0,0);" name="gpaxpercentage" placeholder="เปอร์เซ็นต์ GPAX"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="tgatscore" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;color: rgb(0,0,0);border-color: #6100ff;" name="tgatscore" placeholder="ใส่คะแนน TGAT"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="tgatpercentage" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;border-color: #6100ff;" name="tgatpercentage" placeholder="เปอร์เซ็นต์ TGAT"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="tpatscore" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;border-color: rgb(82,255,0);" name="tgatpercentage" placeholder="ใส่คะแนน TPAT"><input class="placeholder d-md-flex d-lg-flex align-items-md-center justify-content-lg-center align-items-lg-center responsive" type="text" id="tpatpercentage" style="background: rgb(255,255,255);border-radius: 17px;font-size: 26px;font-family: 'Noto Sans Thai', sans-serif;text-align: center;border-color: rgb(82,255,0);" name="tgatpercentage" placeholder="เปอร์เซ็นต์ TPAT"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container text-center"><button class="btn btn-primary" id="calculate-button" type="button" style="border-radius: 6px;width: 112.9375px;height: 54px;font-family: 'Noto Sans Thai', sans-serif;font-weight: bold;font-size: 18px;">คำนวน</button></div>
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title" style="font-family: 'Noto Sans Thai', sans-serif;">สัดส่วนคะแนนของคุณคือ</h4>
-                <h6 class="text-muted card-subtitle mb-2">GPAX</h6><span id="gpaxresult" style="font-size: 57px;">0</span>
-                <h6 class="text-muted card-subtitle mb-2">TGAT</h6><span id="gatresult" style="font-size: 57px;">0</span>
-                <h6 class="text-muted card-subtitle mb-2">TPAT</h6><span id="patresult" style="font-size: 57px;">0</span>
-                <h6 class="text-muted card-subtitle mb-2" style="font-size: 32px;font-family: 'Noto Sans Thai', sans-serif;color: rgb(255,255,255);">รวม</h6><span id="sumall" style="font-size: 57px;">0</span>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <h1>&nbsp; &nbsp;</h1>
-    </div>
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0" style="font-family: 'Noto Sans Thai', sans-serif;">คำนวน T-Score</h5>
-            </div>
-            <div class="card-body">
-                <p class="card-text">Coming soon! 😊</p>
-            </div>
-        </div>
-    </div>
-    <div class="container"></div>
-    <div class="container">
-        <footer class="text-center py-4">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-lg-3">
-                    <div class="col">
-                        <p class="text-muted my-2">Made with ❤️ by Wuttipat.</p>
-                    </div>
-                    <div class="col">
-                        <ul class="list-inline my-2">
+                <footer class="text-center bg-dark">
+                    <div class="container text-white py-4 py-lg-5"><a class="link-light" href="https://www.github.com/wuttipatsnj">Made with ❤️ by Wuttipat</a>
+                        <ul class="list-inline">
                             <li class="list-inline-item me-4"></li>
                             <li class="list-inline-item me-4"></li>
                             <li class="list-inline-item"></li>
-                        </ul><a href="https://www.facebook.com/wuttipatsnj">My facebook</a>>
-                    </div>
-                    <div class="col">
-                        <ul class="list-inline my-2">
-                            <li class="list-inline-item"></li>
-                            <li class="list-inline-item"><a class="link-secondary" href="#">Build with Bootstrap 5</a></li>
                         </ul>
+                        <p class="text-muted mb-0">Version 2.0.1 Build with Bootstrap 5</p>
                     </div>
-                </div>
+                </footer>
             </div>
-        </footer>
+        </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
