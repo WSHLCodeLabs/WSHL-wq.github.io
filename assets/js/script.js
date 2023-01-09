@@ -1,3 +1,5 @@
+var calculateButton = document.getElementById("calculate-button");
+
 calculateButton.addEventListener("click", function() {
   // Get the values of the input fields
   var gpaxscore = document.getElementById("gpaxscore").value;
