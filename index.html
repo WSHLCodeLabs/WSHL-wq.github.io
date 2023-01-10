@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>TCAS Score calculator </title>
+    <title>TCAS Calc redesign</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Thai&amp;display=swap">
@@ -53,6 +53,20 @@
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0" style="font-family: 'Noto Sans Thai', sans-serif;">แบ่งออกเป็น</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">GPAX</p><span id="gpaxresult" style="font-family: Montserrat, sans-serif;font-size: 47px;">0</span>
+                        <p class="card-text">TGAT</p><span id="gatresult" style="font-family: Montserrat, sans-serif;font-size: 47px;">0</span>
+                        <p class="card-text">TPAT</p><span id="patresult" style="font-family: Montserrat, sans-serif;font-size: 47px;">0</span>
+                        <p class="card-text">A-Level</p><span id="sumalevelresult" style="font-family: Montserrat, sans-serif;font-size: 47px;">0</span>
+                    </div>
+                    <div class="card-body"></div>
+                </div>
+            </div>
         </div>
         <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
             <div class="col">
@@ -64,8 +78,8 @@
                         <h4 class="card-title">GPAX</h4><input type="text" id="gpaxscore" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="GPAX 5 หรือ 6 เทอม" name="gpaxscore">
                         <p class="card-text">&nbsp; &nbsp; &nbsp;&nbsp;</p><input type="text" id="gpaxpercentage" style="border-style: solid;border-radius: 4px;font-family: 'Noto Sans Thai', sans-serif;" placeholder="เปอร์เซ็นต์ GPAX " name="gpaxpercentage">
                         <p class="card-text">&nbsp; &nbsp; &nbsp;&nbsp;</p>
-                        <p class="card-text">&nbsp; &nbsp; &nbsp;&nbsp;</p>
-                        <p class="card-text" style="font-family: 'Noto Sans Thai', sans-serif;">คำแนะนำ : เปอร์เซ็นต์ คือสัดส่วนคะแนนที่มหาวิทยาลัยกำหนดมาเป็นเกณฑ์การคำนวน เช่น ใช้ GPAX 20% ในการคำนวน ดูรายละเอียดได้ใน mytcas.com ในหัวข้อรายละเอียดของแต่ละสาขา</p>
+                        <p class="card-text">&nbsp;</p>
+                        <p class="card-text" style="font-family: 'Noto Sans Thai', sans-serif;">คำแนะนำ : เปอร์เซ็นต์ คือสัดส่วนคะแนนที่มหาวิทยาลัยกำหนดมาเป็นเกณฑ์การคำนวน เช่น ใช้ GPAX 20% ในการคำนวน ดูรายละเอียดได้ใน mytcas.com ในหัวข้อรายละเอียดของแต่ละสาขา ควรใส่ให้ครบ 100% เพื่อการคำนวนที่ถูกต้อง</p>
                     </div>
                 </div>
             </div>
@@ -161,6 +175,7 @@
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/tscore.js"></script>
 </body>
 
 </html>
