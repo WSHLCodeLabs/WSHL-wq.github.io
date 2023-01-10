@@ -40,10 +40,13 @@ calculateButton.addEventListener("click", function() {
 
 
   var sumall = gatresult + patresult + gpaxresult + mathresult + sciresult + phyresult + chemresult + bioresult + socresult + tharesult + engresult;
+    
+ var sumalevelresult = mathresult + sciresult + phyresult + chemresult + bioresult + socresult + tharesult + engresult;
 
-  // Display the result in the span element
-  // document.getElementById("gatresult").innerHTML = gatresult;
-  // document.getElementById("patresult").innerHTML = patresult;
-  // document.getElementById("gpaxresult").innerHTML = gpaxresult;
+  // Display the result in the span element 
+document.getElementById("sumalevelresult").innerHTML = sumalevelresult;
+document.getElementById("gatresult").innerHTML = gatresult;
+ document.getElementById("patresult").innerHTML = patresult;
+  document.getElementById("gpaxresult").innerHTML = gpaxresult;
   document.getElementById("sumall").innerHTML = sumall;
 });
